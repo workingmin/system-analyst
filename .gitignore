@@ -1,0 +1,66 @@
+# 通用 .gitignore — 适用于以 Markdown / HTML 文档为主的项目
+# 保留 .md 和 .html 文件，不忽略文档内容；忽略常见的临时文件、编辑器配置、依赖目录等
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# 编辑器/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Node.js 依赖与日志（如果使用）
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Python 虚拟环境与缓存（若有）
+venv/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 生成/构建输出、缓存和测试产物
+dist/
+build/
+out/
+.cache/
+coverage/
+coverage.xml
+
+# 常见临时/备份文件
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*.orig
+
+# 打包/锁文件（可按需保留）
+# package-lock.json
+# yarn.lock
+
+# OS / 工具产生的隐藏文件
+*.DS_Store
+*.Spotlight-V100
+
+# local environment files
+.local/
+
+# Ignore editor swap/lock files
+*.lock
+
+# If any local preview or generated HTML caches exist, ignore those specific patterns
+*.cache
+
+# End of .gitignore
