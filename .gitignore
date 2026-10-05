@@ -63,10 +63,42 @@ coverage.xml
 # If any local preview or generated HTML caches exist, ignore those specific patterns
 *.cache
 
-# Agent 工具产生的目录（勿提交进 git）
+# ==============================================
+# AI编码Agent 本地运行时/会话/缓存目录（禁止提交）
+# 说明：排除各类AI编码Agent工具在项目根目录生成的不可共享本地数据
+# （会话日志、缓存、运行时状态、临时快照等）；部分工具允许提交团队
+# 共享的配置/技能目录，用 ! 语法豁免保留。
+# 排序：按工具名（小写）字母序，便于查找与维护。
+# ==============================================
+# Aider（会话历史缓存）
+.aider/
+
+# Amazon Q（Q Agent运行数据）
+.amazonq/
+
+# Claude Code（排除会话/缓存，保留可共享技能目录）
+.claude/
+!.claude/skills/
+
+# 腾讯 CodeBuddy（排除本地记忆与local私有配置，保留团队规则）
+.codebuddy/memories/
+.codebuddy/*.local.json
+!.codebuddy/rules/
+
+# Cursor Agent（本地状态、hooks缓存）
+.cursor/
+
+# Gemini CLI（排除本地缓存，保留共享配置）
+.gemini/
+!.gemini/settings.json
+
+# Roo Coder（会话缓存）
+.roo/
+
+# Windsurf（工作流、本地状态缓存）
+.windsurf/
+
+# WorkBuddy（本地会话与任务运行数据）
 .workbuddy/
-.agents/
-.sessions/
-.agent/
 
 # End of .gitignore
